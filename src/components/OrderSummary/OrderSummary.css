@@ -1,0 +1,34 @@
+.order-summary > p {
+   font-size: 17px;
+}
+
+.order-summary > h3{
+    text-align: center;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+}
+.order-summary > p {
+    margin-left: 5%;
+}
+
+#clear-cart-btn, #review-order-btn {
+    margin: 5%;
+    border: 0;
+    width: 232px;
+    height: 48px;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+#grand-total{
+    font-size: 21px;
+}
+
+#clear-cart-btn {
+    background-color: #FF3030;
+}
+
+#review-order-btn {
+    background-color: #FF9900;
+}

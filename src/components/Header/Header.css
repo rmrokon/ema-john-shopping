@@ -1,0 +1,25 @@
+nav {
+    background-color: #1C2B35;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+nav img{
+    margin-left: 146px;
+}
+
+.links {
+    margin-right: 139px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-right: 36px;
+}
+
+nav a:hover{
+    color: orangered;
+}
