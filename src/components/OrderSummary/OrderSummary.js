@@ -2,23 +2,21 @@ import React from 'react';
 import './OrderSummary.css'
 
 const OrderSummary = (props) => {
-    const selectedItems = props.cart.length;
     let totalPrice = 0;
     let totalShipping = 0;
-    let tax = 0;
     let grandTotal = 0;
-
+    let quantity = 0;
     props.cart.forEach(productOnCart => {
-        totalPrice += productOnCart.price;
-        totalShipping += productOnCart.price * 0.02;
-        tax += productOnCart.price * 0.05;
-        grandTotal = totalPrice + totalShipping + tax;
+        quantity += productOnCart.quantity;
+        totalPrice += (productOnCart.price * productOnCart.quantity);
+        totalShipping += productOnCart.shipping;
     })
-
+    const tax = parseFloat((totalPrice * 0.15).toFixed(2));
+    grandTotal = totalPrice + totalShipping + tax;
     return (
         <div className='order-summary'>
             <h3>Order Summary</h3>
-            <p>Selected Items: {selectedItems}</p>
+            <p>Selected Items: {quantity}</p>
             <p>Total Price: ${totalPrice}</p>
             <p>Total Shipping: ${totalShipping}</p>
             <p>Tax: ${tax}</p>
