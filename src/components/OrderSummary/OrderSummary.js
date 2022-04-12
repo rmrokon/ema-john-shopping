@@ -21,10 +21,7 @@ const OrderSummary = (props) => {
             <p>Total Shipping: ${totalShipping}</p>
             <p>Tax: ${tax}</p>
             <p id='grand-total'>Grand Total: ${grandTotal}</p>
-            <div>
-                <button id='clear-cart-btn'>Clear Cart</button><br></br>
-                <button id='review-order-btn'>Review Order</button>
-            </div>
+            {props.children}
         </div>
     );
 };

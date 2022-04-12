@@ -1,0 +1,93 @@
+.form-container {
+    width: 500px;
+    height: auto;
+    border: 1px solid #95A0A7;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin: 40px auto;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+}
+
+.form-title {
+    color: #2A414F;
+    font-weight: 400;
+    font-size: 35px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 400;
+    font-size: 17px;
+    margin-left: 5px;
+}
+
+.input-group input {
+    width: 415px;
+    height: 55px;
+    border: 1px solid #95A0A7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 24px;
+    padding: 5px;
+}
+
+.form-submit {
+    width: 415px;
+    height: 55px;
+    font-size: 21px;
+    color: #0E161A;
+    background-color: rgba(255, 153, 0, 0.3);
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: rgba(255, 153, 0, 0.8);
+    color: white;
+}
+
+.form-link {
+    color: #FF9900;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.or-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line-div {
+    border: 1px solid #95A0A7;
+    background-color: #95A0A7;
+    width: 145px;
+    height: 0px;
+}
+
+.or {
+    margin: 0 10px;
+    font-weight: 400;
+    font-size: 17px;
+    color: #95A0A7;
+}
+
+.google-signin button {
+    width: 415px;
+    height: 55px;
+    font-size: 21px;
+    color: #0E161A;
+    background-color: silver;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
