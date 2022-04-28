@@ -16,25 +16,31 @@ function App() {
       <Header></Header>
       <TitleHelmet title={'Shop'} path={'/'} element={<Shop></Shop>}></TitleHelmet>
       <TitleHelmet title={'Shop'} exact={true} path={"/shop"} element={<Shop></Shop>}></TitleHelmet>
+
       <TitleHelmet title={'About'} exact={true} path={'/about'} element={<About></About>}></TitleHelmet>
+
       <TitleHelmet title={'Orders'} exact={true} path={'/orders'} element={
         <RequireAuth>
           <Orders></Orders>
         </RequireAuth>
       }></TitleHelmet>
+
       <TitleHelmet title={'Inventory'} exact={true} path={'/inventory'} element={
         <RequireAuth>
           <Inventory></Inventory>
         </RequireAuth>
       }></TitleHelmet>
+
       <TitleHelmet title={'Shipment'} exact={true} path={'/shipment'} element={
         <RequireAuth>
           <Shipment></Shipment>
         </RequireAuth>
       }></TitleHelmet>
+
       <TitleHelmet title={'Login'} exact={true} path={'/login'} element={
         <Login></Login>
       }></TitleHelmet>
+
       <TitleHelmet title={'Sign Up'} exact={true} path={'/signup'} element={
         <SignUp></SignUp>
       }></TitleHelmet>

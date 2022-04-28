@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import './SignUp.css';
 import auth from '../../firebase.init';
 
@@ -9,6 +9,7 @@ const SignUp = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
+    const [sendEmailVerification, sending, errorEmailVerification] = useSendEmailVerification(auth);
     const navigate = useNavigate();
 
     const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth);
@@ -29,13 +30,15 @@ const SignUp = () => {
         navigate('/shop');
     }
 
-    const handleCreateUser = e => {
+    const handleCreateUser = async (e) => {
         e.preventDefault();
         if (password !== confirmPassword) {
             setError('Passwords did not match');
             return;
         }
         createUserWithEmailAndPassword(email, password);
+        await sendEmailVerification();
+        alert('Email Sent');
     }
     return (
         <div className='form-container'>

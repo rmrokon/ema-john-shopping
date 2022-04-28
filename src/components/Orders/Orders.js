@@ -9,18 +9,18 @@ import './Orders.css'
 
 const Orders = () => {
     const [products, setProducts] = useProducts();
-    const [cart, setCart] = useCart(products);
+    const [cart, setCart] = useCart();
     const handleDelete = (productToBeDeleted) => {
-        const rest = cart.filter(product => product.id !== productToBeDeleted.id)
+        const rest = cart.filter(product => product._id !== productToBeDeleted._id)
         setCart(rest);
-        removeFromDb(productToBeDeleted.id);
+        removeFromDb(productToBeDeleted._id);
     }
     return (
         <div className='shop-container'>
             <div id='products-on-cart' className="products-container">
                 {
                     cart.map(product =>
-                        <CartItem key={product.id} product={product} handleDelete={handleDelete}></CartItem>
+                        <CartItem key={product._id} product={product} handleDelete={handleDelete}></CartItem>
                     )
                 }
             </div>
